@@ -1,0 +1,48 @@
+{
+  "name": "crypto-service",
+  "version": "1.0.0",
+  "description": "Cryptographic Service",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha src/**/*-test.js",
+    "build": "node_modules/.bin/babel src --out-dir build --copy-files",
+    "lint": "node_modules/.bin/eslint .",
+    "prestart": "npm run build",
+    "start": "node build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiolkaf/crypto-service.git"
+  },
+  "author": "Filip Fiolka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fiolkaf/crypto-service/issues"
+  },
+  "homepage": "https://github.com/fiolkaf/crypto-service#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.5",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-register": "^6.26.0",
+    "eslint": "^5.0.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "mocha": "^5.2.0",
+    "proxyquire": "^2.0.1",
+    "sinon": "^6.0.0",
+    "sinon-express-mock": "^2.0.4",
+    "supertest": "^3.1.0",
+    "unexpected": "^10.38.0"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "body-parser": "^1.18.3",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "uuid": "^3.2.1"
+  }
+}
